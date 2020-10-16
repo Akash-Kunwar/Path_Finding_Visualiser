@@ -3,12 +3,12 @@ import Node from "./Node/Node";
 import NavigationBar from "./Header/NavigationBar";
 import { dijkstra, getNodesInShortestPathOrder } from "./Algorithms/dijkstra";
 import "./Main.css";
-
-const START_NODE_ROW = 10;
-const START_NODE_COL = 15;
-const FINISH_NODE_ROW = 10;
-const FINISH_NODE_COL = 35;
-
+const rows=15
+const cols=40
+const START_NODE_ROW = 0;
+const START_NODE_COL = 0;
+const FINISH_NODE_ROW =rows-1;
+const FINISH_NODE_COL = cols-1;
 export default class Main extends Component {
   constructor(props) {
     super(props);
@@ -123,9 +123,9 @@ export default class Main extends Component {
 
 const getInitialGrid = () => {
   const grid = [];
-  for (let row = 0; row < 20; row++) {
+  for (let row = 0; row < rows; row++) {
     const currentRow = [];
-    for (let col = 0; col < 50; col++) {
+    for (let col = 0; col < cols; col++) {
       currentRow.push(createNode(col, row));
     }
     grid.push(currentRow);
