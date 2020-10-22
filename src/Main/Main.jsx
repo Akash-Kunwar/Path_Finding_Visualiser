@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Node from "./Node/Node";
-import NavigationBar from "./Header/NavigationBar";
 import { dijkstra, getNodesInShortestPathOrder } from "./Algorithms/dijkstra";
 import "./Main.css";
 const rows=15
@@ -84,10 +83,8 @@ export default class Main extends Component {
 
     return (
       <div>
-        <NavigationBar
-          onVisiualizePressed={() => this.visualizeDijkstra()}
-          onClearPathPressed={() => this.clearPath()}
-        />
+        <button onClick={()=>this.visualizeDijkstra()}>Visual</button>
+        <button onClick={()=>this.clearPath()}>Clear</button>
 
         <div className="grid">
           {grid.map((row, rowIdx) => {

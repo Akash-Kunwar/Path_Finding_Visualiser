@@ -8,13 +8,13 @@
 }
 
 .node-finish {
-  background-image: url("/destination-node.png");
+  background-color: darkgreen;
   background-repeat: no-repeat;
   background-size: 24px 24px;
 }
 
 .node-start {
-  background-image: url("/origin-node.png");
+  background-color: red;
   background-repeat: no-repeat;
   background-size: 25px 25px;
 }
